@@ -21,4 +21,4 @@ def find(chat_id):
 	return api_key
 
 def set(chat_id,api_key):
-	 dbcol.update_one({"_id":chat_id},{"$set":{"api_key":lg_code}})
+	 dbcol.update_one({"_id":chat_id},{"$set":{"api_key":api_key}})

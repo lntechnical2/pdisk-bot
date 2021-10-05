@@ -14,7 +14,7 @@ def insert(chat_id):
             	dbcol.insert_one(user_det)
             except:
             	pass
-def find(chat_id)
+def find(chat_id):
 	user_id = chat_id
 	data = dbcol.find_one({"_id":user_id})
 	api_key = data["api_key"]

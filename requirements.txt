@@ -2,3 +2,4 @@ TgCrypto
 Pyrogram
 pymongo
 dnspython
+requests

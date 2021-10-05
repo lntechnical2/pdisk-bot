@@ -36,7 +36,7 @@ async def api_connect(client,message):
         	except Exception as f:
         		print(f)
         		e = res['msg']
-        		await message.reply_text("Error:{e}")
+        		await message.reply_text(f"Error:{e}")
 
         		       	
 

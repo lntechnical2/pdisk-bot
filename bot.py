@@ -33,7 +33,8 @@ async def api_connect(client,message):
         		check = res['data']
         		set(message.chat.id,API_KEY)
         		await message.reply_text("Your Account Conected Successfully ✅")
-        	except:
+        	except Exception as f:
+			print(f)
         		e = res['msg']
         		await message.reply_text("Error:{e}")
 

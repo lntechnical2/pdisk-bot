@@ -30,7 +30,7 @@ async def connect(client,message):
 	await message.reply_text('Send Me Your api_key from pdisk\nhttps://www.cofilink.com/use-api',reply_markup=ForceReply(True))
 	            
 
-@Client.on_message(filters.private & filters.reply)
+@app.on_message(filters.private & filters.reply)
 async def api_connect(client,message):
         if (message.reply_to_message.reply_markup) and isinstance(message.reply_to_message.reply_markup, ForceReply):
         	API_KEY = message.text
@@ -79,4 +79,6 @@ async def upload(client,message):
 				await message.reply_text(f"Error:```{e}```")
 			
 	else:
-		await message.reply_text("Connect Your Account Using Command /connect")						
+		await message.reply_text("Connect Your Account Using Command /connect")	
+		
+app.run()

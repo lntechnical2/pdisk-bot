@@ -42,7 +42,7 @@ async def api_connect(client,message):
 @app.on_message(filters.private & filters.regex("http|https"))
 async def upload(client,message):
 	api_key = find(message.chat.id)
-	if ap_key:
+	if api_key:
 		data = message.text
 		v_ = data.split("\n")
 		try:

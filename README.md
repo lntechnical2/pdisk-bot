@@ -18,6 +18,7 @@ pdisk uploader telegram bot
 
 * DATABASE_NAME  - Your database name from mongoDB. Default will be 'my'
 
+* ADMIN - Your User ID
 
 ## How To Create Data Base Url
  https://youtu.be/HhHzCfrqsoE
@@ -25,6 +26,7 @@ pdisk uploader telegram bot
 ## Bot Commands
 > set command
 * `/connect` connect your account
+* `/broadcast Send Message To all User
 
 ### Deploy to Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/lntechnical2/pdisk-bot)

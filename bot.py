@@ -53,7 +53,7 @@ async def upload(client,message):
 			await message.reply_text('**How To Use**\n\nExample:-\n```title - Sample test \nlink - http://telegramfiles.com/files/10384867/6096083c4f62cba7367b9b6891bafd98/10_Minute_Timer_4ASKMcdCc3g_278.mkv\ntumb - https://tgstream.iamidiotareyoutoo.com/159180/1875203403```\n\n**thumb is optinal you can send titlt and link**',reply_to_message_id = message.message_id)
 			return
 		try:
-			thumb =  v_[0].split('-')[1].replace(" ","")
+			thumb =  v_[2].split('-')[1].replace(" ","")
 		except:
 			thumb = None
 		if thumb:

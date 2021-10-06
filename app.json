@@ -20,9 +20,6 @@
             "description": "Your Bot Token From @BotFather",
             "value": ""
         },
-        "ADMIN": {
-            "description":"Add Your User ID"
-        },
         "DB_URL": {
             "description": "Your Mongo DB URL Obtained From mongodb.com Watch This Video https://youtu.be/HhHzCfrqsoE",
             "value": ""

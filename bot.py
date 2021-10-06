@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-rom time import time
+from time import time
 from datetime import datetime
 from pyrogram.types import (
     ForceReply

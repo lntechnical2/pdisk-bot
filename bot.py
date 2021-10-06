@@ -6,7 +6,6 @@ from pyrogram.types import (
     InlineKeyboardButton
     Message
     InlineKeyboardMarkup
-	
 )
 from pdisk import pdisk_url , api_check
 from database import insert , find , set , getid

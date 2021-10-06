@@ -37,7 +37,7 @@ ADMIN = os.environ.get("ADMIN",923943045)
 app = Client("pdisk" ,bot_token = TOKEN ,api_id = API_ID ,api_hash = API_HASH )
     
 @Client.on_message(filters.command("start"))
-async def start(client, m: Message):
+async def start(client, m: message):
    if m.chat.type == 'private':
        insert(int(m.chat.id))
        await m.reply_text(f"**Hello i am Pdisk Uploader Bot\nMade with love by @mrlokaman`",   
@@ -55,7 +55,7 @@ async def connect(client,message):
 	await message.reply_text('Send Me Your api_key from pdisk\nhttps://www.cofilink.com/use-api',reply_to_message_id = message.message_id,reply_markup=ForceReply(True))
 
 @Client.on_message(filters.command("ping"))
-async def ping_pong(client, m: Message):
+async def ping_pong(client, m: message):
     start = time()
     m_reply = await m.reply_text("pinging...")
     delta_ping = time() - start
@@ -66,7 +66,7 @@ async def ping_pong(client, m: Message):
 
 
 @Client.on_message(filters.command("uptime"))
-async def get_uptime(client, m: Message):
+async def get_uptime(client, m: message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))

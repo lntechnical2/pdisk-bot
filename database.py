@@ -28,5 +28,5 @@ def getid():
     values = []
     for key  in dbcol.find():
          id = key["_id"]
-         values.append((id)) 
+         values.append(id) 
     return values

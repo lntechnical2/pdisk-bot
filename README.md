@@ -1,6 +1,10 @@
 # pdisk-bot
+pdisk uploader telegram bot 
 
-
+# How To Use 
+<p align="center">
+    <img src="https://tg-link.herokuapp.com/dl/0/AgADfq0xG49G6FY.jpg">
+</p>
 
 ## Configs 
 

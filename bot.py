@@ -1,5 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import (
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
     ForceReply
 )
 from pdisk import pdisk_url , api_check

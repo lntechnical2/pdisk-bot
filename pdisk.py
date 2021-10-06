@@ -1,4 +1,4 @@
-import import requests as re
+import  requests as re
 import json 
 def pdisk_url(api_key:str , link:str , title :str , thumb = None ):
 		if thumb :

@@ -3,14 +3,14 @@ from pyrogram.types import (
     ForceReply
 )
 from pdisk import pdisk_url , api_check
-from database import insert , find , set 
+from database import insert , find , set , getid
 import os
 
 
 TOKEN = os.environ.get("TOKEN", "")
 API_ID = int(os.environ.get("API_ID",12345))
 API_HASH = os.environ.get("API_HASH","")
-
+ADMIN = os.environ.get("ADMIN","")
 
 app = Client("pdisk" ,bot_token = TOKEN ,api_id = API_ID ,api_hash = API_HASH )
     
@@ -38,7 +38,19 @@ async def api_connect(client,message):
         		e = res['msg']
         		await message.reply_text(f"Error: {e}",reply_to_message_id = message.message_id)
 
-        		       	
+
+@app.on_message(filters.private & filters.user(ADMIN) & filters.command(["broadcast"]))
+async def broadcast(client,message):
+ if (message.reply_to_message):
+   text_reply = await message.reply_text("fetching users from database")
+   users = getid()
+   total = len(ids)
+   await text_reply.edit(f"Broadcast Succesfully Started\n\nSending Message To {total} Users")
+   for id in users:
+     try:
+     	await message.reply_to_message.copy(id)
+     except:
+     	pass       		       	
 
 @app.on_message(filters.private & filters.regex("http|https"))
 async def upload(client,message):

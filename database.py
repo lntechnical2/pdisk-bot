@@ -14,6 +14,7 @@ def insert(chat_id):
             	dbcol.insert_one(user_det)
             except:
             	pass
+
 def find(chat_id):
 	user_id = chat_id
 	data = dbcol.find_one({"_id":user_id})
@@ -22,3 +23,10 @@ def find(chat_id):
 
 def set(chat_id,api_key):
 	 dbcol.update_one({"_id":chat_id},{"$set":{"api_key":api_key}})
+
+def getid():
+    values = []
+    for key  in dbcol.find():
+         id = key["_id"]
+         values.append((id)) 
+    return values

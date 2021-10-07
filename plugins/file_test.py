@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 
-@client.on_message(filters.private &(filters.document | filters.video))
+@Client.on_message(filters.private &(filters.document | filters.video))
 async def file_down(client,message):
 	file = message
 	ms = await message.repy_text("``` Trying To Download...```")

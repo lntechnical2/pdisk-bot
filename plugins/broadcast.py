@@ -1,6 +1,7 @@
 from pyrogram import Client, filters
 import os
 ADMIN = int(os.environ.get("ADMIN", 923943045))
+from database import getid
 
 @Client.on_message(filters.user(ADMIN) & filters.command(["broadcast"]))
 async def broadcast(bot, message):

@@ -6,7 +6,7 @@
         "telegram"
     ],
     "repository": "https://github.com/lntechnical2/pdisk-bot",
-    "success_url": "https://telegram.dog/lntechnical",
+    "success_url": "https://telegram.dog/moviezbarn",
     "env": {
         "API_ID": {
             "description": "Your APP ID From my.telegram.org ",

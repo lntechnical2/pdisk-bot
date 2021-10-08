@@ -3,5 +3,3 @@ Pyrogram
 pymongo
 dnspython
 requests
-flask
-gunicorn
